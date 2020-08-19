@@ -6,11 +6,11 @@ import api from '../../services/api';
 import styles from './styles';
 
 export default function RepositoryItem({ repository }) {
-  const [likes, setLikes] = useState(repository.likes)
+  const [likes, setLikes] = useState(repository.likes);
 
   async function handleLikeRepository(id) {
     api.post(`/repositories/${id}/like`).then(response => {
-      setLikes(response.data);
+      setLikes(response.data.likes);
     });
   }
 
