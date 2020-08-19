@@ -34,7 +34,7 @@ export default function RepositoryItem({ repository }) {
           style={styles.likeText}
           testID={`repository-likes-${repository.id}`}
         >
-          {likes} curtidas
+          {likes} {likes !== 1 ? 'curtidas' : 'curtida'}
         </Text>
       </View>
 
